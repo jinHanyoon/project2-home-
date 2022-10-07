@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkalami&display=swap" rel="stylesheet">
+    <script src="/js/main.js"></script> 
+<script>
+    $(document).ready(function(){
+        var n=0;
+        var a=0;
+
+        $('.btn li').eq(0).addClass('on')
+     $('.text_cl a').hover(function(){
+                $(this).addClass('on')
+           
+            },
+            function(){$(this).removeClass('on')})
+     $('.left_text li').click(function(){
+        var a=$(this).index()
+        console.log(a,'리스트 인덱스번호')
+
+     })
+     $('.btn li').click(function(){
+        var n=$(this).index()
+        color(n)
+        slider(n)
+  
+  })
+        function slider(n){
+            var posX = n*(-600)+'px'
+            $('.picture').animate({left:posX})
+            $('.left_text').animate({left:posX})
+        }
+        function color(n){
+        $('.btn li').removeClass('on')
+        $('.btn li').eq(n).addClass('on')
+        }
+
+
+
+       $('.after_btns li').click(function(){
+            var c=$(this).index();
+            console.log(c)
+
+   //3번넘겨야함
+           var asoX=c*(-600)+'px'
+                $('.after_text').animate({left:asoX},8000)
+                console.log('이동')})
+           
+
+
+        $('.after_text li figure').hover(function(){
+           $('.after_text').stop()
+        },
+        function(){
+            var asoX=(-1600)+'px'
+                $('.after_text').animate({left:asoX},8000)
+        })
+      
+      
+        
+
+
+        
+            
+
+            
+       
+    })
+
+    </script>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="header_in">
+            <div class="logo">
+                <h1>logo</h1>
+            </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">SHOP</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">menu</a></li>
+                    </ul>
+
+                </nav>
+                <div class="login">
+                    <ul>
+                        <li><a href="#">login</a></li>
+                        <li><a href="#">fresh</a></li>
+                    </ul>
+                
+                </div>
+           
+            </div>
+        </header>
+
+    <section>
+        <div class="page1">
+            <div class="page1_text">
+                <div class="main_text">꼭 필요한 성분만을 담아 연구합니다.</div>
+                <p>OUR Story</p>
+            </div>
+            <div class="text_cl">
+              <a href="#">  Read More</a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="page2">
+                <div class="main_infor">
+                    <div class="left">
+                        <ul class="left_text">
+                            <li>
+                        <span>★★★★★ 4.9/5</span>
+                        <div class="left_info">
+                            <h1>PURE<br>
+                            BALANCE<br>
+                        PET<br>
+                    SHAMPOO</h1>
+                            <h2>퓨어 프렌즈 샴푸는요?</h2>
+                            <p>피부가 나빠지는데는 여러 이유가 잇지만 보호자와 함께 살아가면서 
+                                <br>접촉하게 되는 400회 이상의 샴푸도
+                                <br> 그 원인이 될 수 있다는 것에 주목하였습니다!<br> 
+                                안전한 원료를 담아 핡고 흡수되는 문제까지 생각한 제품으로<br>
+                                오직 강아지 피부의 건강만을 생각한 펫 샴푸입니다.  <br> 
+                        </div>
+                       </li>
+
+                       <li>
+                        <span>★★★★★ 4.8/5</span>
+                        <div class="left_info">
+                            <h1>TS<br>
+                            SUNNY<br>
+                        PET<br>
+                    SHAMPOO</h1>
+                            <h2>TS 샴푸를 소개합니다!</h2>
+                            <p>코코넛 유래의 착한 세정성분등을 사용하여<br>
+                                 반려견의 피부 건강과 모질에 도움을줍니다. <br> 
+                                콜라겐과 아르기닌 성분을 함유하여 모질을 가꾸어 줍니다 <br> 
+                                견종에 상관없이 모두가 사용이 가능하며<br>
+                                식물 유래 성분으로 깊은 보습감과  풍부한 영양곱급까지!!<br>
+                        </div>
+                        
+                       </li>
+                       <li>
+                        <span>★★★★★ 4.6/5</span>
+                        <div class="left_info">
+                            <h1>Mothers Dog<br>
+                            POGNI<br>
+                        PET<br>
+                    SHAMPOO</h1>
+                            <h2>사랑한다면 포그니 샴푸 하세요!</h2>
+                            <p>엄마의 마음을 그대로 녹여 낸 포그니 샴푸<br>
+                                은은하면서도 조금 더 사랑스러운 <br>
+                                베이비 파우더향이 매력적인데요<br>
+                                기본에 충실하면서도 꼭 필요한 성분을<br>
+                                필요한 만큼만 정직하게 담아내어 꼭 추천해드려요<br>
+                                </p>
+                        </div>
+                        
+                       </li>
+
+                       <li>
+                        <span>★★★★★ 4.7/5</span>
+                        <div class="left_info">
+                            <h1>KUNDAL<br>
+                            PERFUME<br>
+                        PET<br>
+                    SHAMPOO</h1>
+                            <h2>강아지 피부에 딱 맞춘 PH 밸런싱 레시피</h2>
+                            <p>전문 조향사가 강아지 맞춤으로 조향한<br>
+                                애견 샴푸 단독 향기<br>
+                                후각에 예민한 강이자가 스트레스를 받지 않는<br>
+                                은은항 향기가 하루 종일 감돌아<br>
+                                반려인과 강아지 모두를 기분 좋게 해줍니다<br> </p>
+                        </div>
+                       </li>
+
+                       <li>
+                        <span>★★★★★ 4.8/5</span>
+                        <div class="left_info">
+                            <h1>EVERYDAY<br>
+                               ISLE<br>
+                           OF<br>
+                        DOGS</h1>
+                            <h2>매력적인 향과 지속력이 뛰어난 케어 시스템</h2>
+                            <p>사람보다 200배 이상 뛰어난 후각신경을 가진 반려견의<br>
+                                특성을 고려해 전문향수 디자이너에게<br>
+                                향기제작을 의뢰 하여 반려견의 후각기능에<br>
+                                영향을 주지 않으면서<br>
+                                은은한 향이 오랫동안 지속되도록 향을 개발하였습니다<br></p>
+                        </div> 
+                       </li>
+                    </ul>
+                    </div>
+
+
+                    <div class="right">
+                   
+                    <ul class="picture">
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                    <ul class="btn">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+
+
+    
+                    </ul>
+                </div>
+             
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="page3">
+            <div class="after">
+                <ul class="after_text">
+                    <li>
+                        <img src="./image/after1.jpg" alt="dog">
+                        <figure>
+                            <h4>사용하기 편하고<br> 애들이 좋아해요</h4>
+                            <p>소량만 사용해도 거품도 풍성
+                            하게 나고 <br>은은한 쿨링감도
+                        느껴져요<br>정말 강추합니다!</p>
+                        <span>mirac****</span>
+                        </figure>
+                    </li>
+                    <li>
+                        <img src="./image/after2.jpg">
+                        <figure>
+                            <h4>정말 많이 강추합니다!!<br>이 제품만 구매합니다</h4>
+                            <p>우리 강아지 병원가니며 약 먹이는<br>
+                                동시에 직접적으로 피부에 닿는 샴푸 찾다가 구매하게됬어요!
+                           
+                        </p>
+                        <span>dbswl****</span>
+                        </figure>
+                    </li>
+                    <li>
+                        <img src="./image/ggami.jpeg">
+                        <figure>
+                            <h4>우리 강아지가 좋아해요!<br>
+                                추천합니다!
+                                
+                            </h4>
+                            <p>씻고 난 뒤에 거부감 없는<br>
+                            냄새가 나고 우리 애기도 많이 <br>
+                        좋아하는것같아요!</p>
+                        <span>wlsgk****</span>
+                        </figure>
+                    </li>
+                    <li>
+                        <img src="./image/after4.jpg">
+                        <figure>
+                            <h4>목욕시키면서<br>새로운 느낌이 들었어요!</h4>
+                            <p>목욕시키고 손이 당기거나하는<br>
+                            느낌이 없어서 새로운 <br>
+                        느낌이 들었어요!</p>
+                        <span>sjiid****</span>
+                        </figure>
+                    </li>
+                    <li>
+                        <img src="./image/after5.jpg">
+                        <figure>
+                            <h4>이거 너무 좋아서 <br>리뷰쓰러 왔어요ㅠㅠ</h4>
+                            <p>시중에 파는 세정력 좋은
+                                 샴푸 썻는데 계속<br> 올라오는 냄새에 지쳤는데 <br>
+                                이 제품을 왜 이제야 알았는지 ㅠㅠ<br></p>
+                        <span>tserd****</span>
+                        </figure>
+                    </li>
+                    <li>
+                        <img src="./image/after6.jpg">
+                        <figure>
+                            <h4>한달 사용 후 <br>진작 바꿀걸 그랬어요</h4>
+                            <p>한달사용후~ 진작 바꿀걸 그랬어요 <br>
+                                빨간트러블 많았는데<br>
+                                진짜 트러블이 싹 사라졌어요!</p>
+                        <span>hard2****</span>
+                        </figure>
+                    </li>
+                    <li>
+                        <img src="./image/after7.jpg">
+                        <figure>
+                            <h4>유투바 보고 구매했는데 <br> 너무 좋은것같읍니다.</h4>
+                            <p>춘식이 몸에 빨간 여드름이 올라와서<br>
+                            사용후기 보고 구매하게되었는데 <br>
+                        너무 만족합니다.</p>
+                        <span>tired****</span>
+                        </figure>
+                    </li>
+                    <li>
+                        <img src="./image/after8.jpg">
+                        <figure>
+                            <h4>울 아기들 <br>뽀송뽀송해졌어요</h4>
+                            <p>다른 샴푸로 샤워전쟁하고도<br>
+                            피부에 조금씩 트러블이 올라왔는데 <br>
+                        이 제품은 그런게 없네요~</p>
+                        <span>iirus****</span>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="after_btn">
+                    <ul class="after_btns">
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="page4">
+            <div class="information">
+                
+            </div>
+        </div>
+
+
+    </section>
+    </div>
+</body>
+</html>
